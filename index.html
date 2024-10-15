@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Gastos Mensuales</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <main class="main-container">
+      <div class="container">
+        <div class="title-container">
+          <h2 class="title">Control de gastos</h2>
+          <h2 class="title title2">mensuales</h2>
+        </div>
+        <form class="form-group">
+          <span class="redAlert"></span>
+          <input type="text" id="nombreGasto" placeholder="Nombre del gasto" />
+          <input
+            type="number"
+            id="valorGasto"
+            placeholder="Valor del gasto"
+            min="0"
+            step="100"
+          />
+          <button
+            class="btnAdd"
+            id="botonFormulario"
+            type="button"
+            onclick="add()"
+          >
+            Agregar Gasto
+          </button>
+          <button class="btnSaveChanges" type="button">Guardar cambios</button>
+        </form>
+        <ul id="listaDeGastos"></ul>
+        <span class="total">
+          Total Mensual: <b id="totalGastos">COP 0</b>
+        </span>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
